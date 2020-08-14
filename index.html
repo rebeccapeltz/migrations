@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+  <link
+    href="https://unpkg.com/cloudinary-video-player/dist/cld-video-player.min.css"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <link
+    href="https://unpkg.com/cloudinary-video-player/dist/cld-video-player.min.css"
+    rel="stylesheet"
+  />
+  <script
+    src="https://unpkg.com/cloudinary-core/cloudinary-core-shrinkwrap.min.js"
+    type="text/javascript"
+  ></script>
+  <script
+    src="https://unpkg.com/cloudinary-video-player/dist/cld-video-player.min.js"
+    type="text/javascript"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/2.6.3/dash.all.min.js"
+    type="text/javascript"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-dash/2.9.2/videojs-dash.min.js"
+    type="text/javascript"
+  ></script>
+
+  <div style="width:500px">
+    <video id="demo-player" controls class="cld-video-player cld-fluid"></video>
+  </div>
+  <script>
+    var cld = cloudinary.Cloudinary.new({
+      cloud_name: "djh67gzdu",
+      secure: true,
+    });
+    var player = cld.videoPlayer("demo-player", {
+      posterOptions: {
+        transformation: {
+          start_offset: 0,
+        },
+      },
+    });
+    var info = {
+      title: "test",
+      subtitle: "adaptive streamin",
+    };
+
+    player.source({
+      publicId: "whale",
+      info: info,
+    });
+  </script>
+</body>
