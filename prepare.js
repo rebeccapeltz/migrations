@@ -12,7 +12,7 @@ const upOptions = {
   eager_async: true,
   eager_notification_url:
     'https://webhook.site/60799e73-a1c2-4760-b23e-46ad7dc55fbb',
-  public_id: 'whale',
+  public_id: 'lake',
   invalidate: true
 }
 cloudinary.uploader

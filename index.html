@@ -46,11 +46,38 @@
     });
     var info = {
       title: "test",
-      subtitle: "adaptive streamin",
+      subtitle: "adaptive streaming",
+    };
+
+    const sources = {
+      publicId: "whale",
+      sourceTypes: ["dash/vp9", "hls/h265", "hls/h264", "mp4"],
+      sourceTransformation: {
+        "dash/vp9": [
+          {
+            streaming_profile: "training_hd_vp9"
+          }
+        ],
+        "hls/h265": [
+          {
+            streaming_profile: "training_hd_h265"
+          }
+        ],
+        "hls/h264": [
+          {
+            streaming_profile: "training_hd_h264"
+          }
+        ],
+        "mp4": [
+          {
+            raw_transformation: "q_auto"
+          }
+        ]
+      }
     };
 
     player.source({
-      publicId: "whale",
+      publicId: "lake",
       info: info,
     });
   </script>
