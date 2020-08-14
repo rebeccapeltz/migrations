@@ -1,0 +1,27 @@
+{
+  "name": "migrations",
+  "version": "1.0.0",
+  "description": "test adaptive streaming",
+  "main": "create-custom-profile-h264.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rebeccapeltz/migrations.git"
+  },
+  "keywords": [
+    "adaptive",
+    "streamin"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rebeccapeltz/migrations/issues"
+  },
+  "homepage": "https://github.com/rebeccapeltz/migrations#readme",
+  "dependencies": {
+    "cloudinary": "^1.22.0",
+    "dotenv": "^8.2.0"
+  }
+}
