@@ -29,15 +29,14 @@
     type="text/javascript"
   ></script>
 
-  <div style="width:500px">
-    <video id="demo-player" controls class="cld-video-player cld-fluid"></video>
-  </div>
+  <video id="example-player" controls muted width="680" height="400"
+    class="cld-video-player cld-video-player-skin-dark"></video>
   <script>
     var cld = cloudinary.Cloudinary.new({
       cloud_name: "djh67gzdu",
       secure: true,
     });
-    var player = cld.videoPlayer("demo-player", {
+    var player = cld.videoPlayer("example-player", {
       posterOptions: {
         transformation: {
           start_offset: 0,
