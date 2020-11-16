@@ -4,6 +4,7 @@ const cloudinary = require("cloudinary").v2;
 function upload(video) {
   const upOptions = {
     resource_type: "video",
+    raw_convert: 'google_speech:vtt',
     eager: [
       {
         format: "mp4",
@@ -51,11 +52,11 @@ function upload(video) {
 }
 
 const videos = [
-  // {
-  //   remoteUrl:
-  //     "https://cloudinary-res.cloudinary.com/video/upload/v1603881991/training/Site_Cartridge_a_Intro.mp4",
-  //   publicId: "training/m-tutorial-sf-site-intro",
-  // },
+  {
+    remoteUrl:
+      "./UnderwritersLaboratoryPsa.mp4",
+    publicId: "test-transcribe",
+  },
   // {
   //   remoteUrl:
   //     "https://cloudinary-res.cloudinary.com/video/upload/v1603882052/training/Site_Cartridge_b_Install_Config.mp4",
